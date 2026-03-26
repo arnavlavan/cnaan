@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הזרם הכנעני בשירי ארץ ישראל - אתר לימודי</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Amatic+SC:wght@700&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --clay: #a0522d;
+            --sand: #f4e9d5;
+            --stone: #d7ccc8;
+            --dark-stone: #3e2723;
+            --accent: #8d6e63;
+        }
+
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Alef', sans-serif;
+            background-color: var(--sand);
+            color: var(--dark-stone);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Amatic SC', cursive;
+        }
+
+        .cuneiform-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            right: 0;
+            background-color: var(--clay);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-card {
+            background: rgba(215, 204, 200, 0.3);
+            border-right: 4px solid var(--clay);
+            backdrop-filter: blur(5px);
+        }
+
+        .quiz-option {
+            transition: all 0.2s;
+            border: 1px solid var(--stone);
+            cursor: pointer;
+        }
+
+        .quiz-option:hover:not(:disabled) {
+            transform: translateX(-5px);
+            background-color: var(--clay);
+            color: white;
+        }
+
+        .quiz-option:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .option-wrong {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #b91c1c !important;
+        }
+
+        .option-correct {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #166534 !important;
+        }
+
+        .sticky-nav {
+            background: rgba(62, 39, 35, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .feedback-correct {
+            background-color: #dcfce7;
+            color: #166534;
+            border: 1px solid #166534;
+        }
+
+        .feedback-incorrect {
+            background-color: #fff7ed;
+            color: #9a3412;
+            border: 1px solid #c2410c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="cuneiform-bg">
+
+    <!-- Navigation -->
+    <nav class="sticky-nav text-white p-4 fixed top-0 w-full z-50 shadow-2xl">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-4 flex-row-reverse">
+            <div class="text-xl md:text-2xl font-bold tracking-widest underline decoration-clay">הזרם הכנעני</div>
+            <ul class="flex flex-row-reverse items-center gap-4 md:gap-8 text-sm md:text-base">
+                <li><a href="#quiz" class="nav-link">בוחן</a></li>
+                <li><a href="#jukebox" class="nav-link">האזנה</a></li>
+                <li><a href="#musical-elements" class="nav-link">מאפיינים</a></li>
+                <li><a href="#ideology" class="nav-link">אידיאולוגיה</a></li>
+                <li><a href="#home" class="nav-link">בית</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="min-h-screen flex flex-col justify-center items-center text-center p-6 border-b-8 border-double border-clay">
+        <div class="animate-fade-in">
+            <h1 class="text-7xl md:text-9xl mb-4 text-clay">שורשים בחול</h1>
+            <p class="text-2xl md:text-3xl max-w-2xl mx-auto font-light italic">
+                מסע מוזיקלי אל ראשיתה של העבריות החדשה: בין נופי המדבר לצלילי החליל
+            </p>
+            <div class="mt-12 animate-bounce">
+                <a href="#ideology" class="text-clay border-2 border-clay p-3 rounded-full hover:bg-clay hover:text-white transition inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ideology -->
+    <section id="ideology" class="max-w-4xl mx-auto py-24 px-6">
+        <h2 class="text-5xl mb-8 border-b-2 border-stone pb-2 text-clay">האידיאולוגיה: חיפוש אחר זהות</h2>
+        <div class="section-card p-8 text-xl space-y-6 leading-relaxed shadow-lg">
+            <p>
+                הסגנון ה"כנעני" לא היה רק תופעה מוזיקלית, אלא חלק מניסיון אידיאולוגי רחב לעצב את העבריות החדשה. הזרם שאף להקים חברה יהודית בארץ ישראל שתהיה מנותקת מהמסורת יהודית של הגלות.
+            </p>
+            <p>
+                במרכז התפיסה עמדה השאיפה להתחבר מחדש לתרבויות השמיות הקדומות ולמרחב הגיאוגרפי של ארץ ישראל, המדבר והיושבים המקומיים.
+            </p>
+            <blockquote class="border-r-4 border-clay pr-6 italic text-gray-700 py-2">
+                "להיות עם חופשי בארצנו - פירושו להיות חלק מהמרחב המזרח-תיכוני, לא שלוחה של אירופה."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Musical Characteristics -->
+    <section id="musical-elements" class="bg-stone bg-opacity-30 py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl mb-12 text-center text-clay">המרכיבים המוזיקליים</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                    <h3 class="text-3xl mb-4">כלי נגינה</h3>
+                    <p>העדפה ברורה לכלים מקומיים: <strong>חליל</strong> ו<strong>דרבוקה</strong>.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                    <h3 class="text-3xl mb-4">מקצבים</h3>
+                    <p>השפעה חזקה של ריקוד ה<strong>דבקה</strong>. מקצבים אסימטריים ואנרגטיים.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                    <h3 class="text-3xl mb-4">לחני המדבר</h3>
+                    <p>שימוש בלחנים המבוססים על <strong>שירי עם בדואיים</strong>.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                    <h3 class="text-3xl mb-4">תכנים</h3>
+                    <p>נופי המדבר, רעיית צאן ומיתוס עברי קדום.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guided Listening (Jukebox) -->
+    <section id="jukebox" class="max-w-4xl mx-auto py-24 px-6">
+        <h2 class="text-5xl mb-12 text-clay">האזנה מודרכת</h2>
+        
+        <div class="space-y-16">
+            <!-- Song 1 -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-4xl text-clay mb-2">דבקה רפיח</h3>
+                    <p class="text-lg mb-4 italic">מילים ולחן: זמיר. ביצוע: הנדל.</p>
+                    <p class="text-lg">שילוב מקצב הדבקה המקומי עם טקסט העוסק בביטחון ובמרחב. השיר מדגים את השפעת המקצבים הערביים על הזמר העברי החדש.</p>
+                </div>
+                <div class="aspect-video relative overflow-hidden rounded shadow-xl border-2 border-clay bg-black">
+                    <div id="player1" class="w-full h-full"></div>
+                </div>
+            </div>
+
+            <!-- Song 2 -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1 aspect-video relative overflow-hidden rounded shadow-xl border-2 border-clay bg-black">
+                    <div id="player2" class="w-full h-full"></div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-4xl text-clay mb-2">אורחה במדבר</h3>
+                    <p class="text-lg mb-4 italic">לחן: זהבי. ביצוע: דגן.</p>
+                    <p class="text-lg">השיר מתאר שיירת גמלים ומשתמש במוטיבים המדמים את תנועת הגמל. יצירת מופת המאחדת מלודיה מערבית עם אווירה מזרחית.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="max-w-3xl mx-auto py-24 px-6">
+        <div class="bg-white p-6 md:p-10 rounded-lg shadow-2xl border-4 border-clay text-dark-stone">
+            <h2 class="text-5xl mb-6 text-center text-clay">בחן את עצמך</h2>
+            <div id="quiz-container">
+                <div id="question-area"></div>
+                
+                <!-- Final Results Display -->
+                <div id="final-results" class="hidden text-center animate-fade-in py-10">
+                    <h3 class="text-5xl mb-6 text-clay">סיכום הבוחן</h3>
+                    <div class="bg-sand p-8 rounded-lg border-2 border-clay mb-8">
+                        <p class="text-xl mb-2">הציון שלך (תשובות נכונות בניסיון ראשון):</p>
+                        <div id="score-display" class="text-7xl font-bold text-clay tracking-tighter">0%</div>
+                    </div>
+                    <p id="score-message" class="mb-10 text-2xl font-medium text-dark-stone"></p>
+                    
+                    <!-- Restart Button with Explicit White Text -->
+                    <button onclick="resetQuiz()" class="inline-block bg-[#a0522d] hover:bg-[#8b4513] text-white font-bold py-5 px-12 rounded-full text-2xl shadow-2xl transition-all transform hover:scale-105 active:scale-95 border-b-4 border-black/20">
+                        לחץ כאן לניסיון חוזר
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-stone text-stone p-12 text-center mt-24">
+        <p class="mb-2">נוצר עבור הסטודנטים באוניברסיטה הפתוחה</p>
+        <p class="text-sm opacity-60">קורס 10785 - מוסיקה פופולרית בישראל | אדם יודפת</p>
+    </footer>
+
+    <!-- YouTube API Script -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        let player1, player2;
+        function onYouTubeIframeAPIReady() {
+            player1 = new YT.Player('player1', {
+                height: '100%',
+                width: '100%',
+                videoId: 'ZGRpi1rDqCo',
+                playerVars: { 'rel': 0, 'modestbranding': 1 }
+            });
+            player2 = new YT.Player('player2', {
+                height: '100%',
+                width: '100%',
+                videoId: 'kx93RDbVPek',
+                playerVars: { 'rel': 0, 'modestbranding': 1 }
+            });
+        }
+
+        const quizData = [
+            {
+                q: "מה הייתה המטרה המרכזית של הסגנון הכנעני במוזיקה?",
+                options: {
+                    a: "לשמר את השירים היהודיים ממזרח אירופה.",
+                    b: "ליצור עבריות חדשה המחוברת למרחב הגיאוגרפי המקומי.",
+                    c: "לשלב מוזיקת ג'אז אמריקאית בשירי ארץ ישראל."
+                },
+                correct: "b",
+                feedback: "נכון מאוד! האידיאולוגיה שאפה לחיבור למרחב הגיאוגרפי והתנתקות מהגלות."
+            },
+            {
+                q: "אילו כלי נגינה נחשבים ל'סמלים' של הזרם הכנעני?",
+                options: {
+                    a: "פסנתר וצ'לו.",
+                    b: "כינור ואקורדיון.",
+                    c: "חליל ודרבוקה."
+                },
+                correct: "c",
+                feedback: "מדויק. החליל והדרבוקה מסמלים את הפשטות והחיבור למדבר."
+            },
+            {
+                q: "איזה ריקוד מקומי השפיע רבות על המקצבים הכנעניים?",
+                options: {
+                    a: "דבקה.",
+                    b: "הורה.",
+                    c: "טנגו."
+                },
+                correct: "a",
+                feedback: "נכון. הדבקה היא הריקוד המקומי שהיווה השראה למקצבים רבים בזרם."
+            },
+            {
+                q: "כיצד באה לידי ביטוי ההשפעה הבדואית בלחני הזרם?",
+                options: {
+                    a: "שימוש בלחנים בדואיים מקוריים או שאילת מוטיבים מלודיים מהם.",
+                    b: "תרגום שירים בדואיים לעברית ללא שינוי הלחן.",
+                    c: "הלחנה בסגנון אופראי המדמה את קולות המדבר."
+                },
+                correct: "a",
+                feedback: "נכון. המלחינים הכנענים שאבו ישירות מהפולקלור המקומי."
+            },
+            {
+                q: "אילו תכנים אופייניים ביותר לטקסטים של הזרם הכנעני?",
+                options: {
+                    a: "חיי היום-יום בקיבוץ ובמפעל.",
+                    b: "נופי המדבר, רעיית צאן ומיתוסים מקראיים קדומים.",
+                    c: "געגועים לעיירה היהודית באירופה."
+                },
+                correct: "b",
+                feedback: "בדיוק. התכנים הללו נועדו ליצור מיתוס עברי חדש-קדום."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let isFirstAttempt = true;
+
+        function renderQuestion() {
+            if (currentQuestion >= quizData.length) {
+                showResults();
+                return;
+            }
+
+            isFirstAttempt = true; 
+            const data = quizData[currentQuestion];
+            const html = `
+                <div class="question-block animate-fade-in">
+                    <p class="text-2xl mb-8 font-bold text-dark-stone leading-tight">${currentQuestion + 1}. ${data.q}</p>
+                    <div id="options-grid" class="space-y-4">
+                        ${Object.entries(data.options).map(([key, val]) => `
+                            <button id="opt-${key}" onclick="handleAnswer('${key}')" class="quiz-btn quiz-option w-full text-right p-5 rounded-lg bg-stone bg-opacity-20 flex justify-between items-center group transition-all text-xl">
+                                <span><span class="font-bold ml-2">${key === 'a' ? 'א' : key === 'b' ? 'ב' : 'ג'}.</span> ${val}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="feedback" class="mt-6 hidden p-5 rounded-lg font-bold text-lg shadow-inner"></div>
+                </div>
+            `;
+            document.getElementById('question-area').innerHTML = html;
+        }
+
+        function handleAnswer(choice) {
+            const data = quizData[currentQuestion];
+            const isCorrect = choice === data.correct;
+            const feedbackDiv = document.getElementById('feedback');
+            const clickedBtn = document.getElementById(`opt-${choice}`);
+
+            if (isCorrect) {
+                // אם צדק בניסיון הראשון, מקבל נקודה
+                if (isFirstAttempt) {
+                    score++;
+                }
+                
+                // הקפאת כפתורים
+                const buttons = document.querySelectorAll('.quiz-btn');
+                buttons.forEach(btn => btn.disabled = true);
+                
+                clickedBtn.classList.add('option-correct');
+                feedbackDiv.innerHTML = `⭐ מעולה! ${data.feedback}`;
+                feedbackDiv.classList.remove('hidden');
+                feedbackDiv.className = `mt-6 p-5 rounded-lg font-bold text-lg shadow-inner feedback-correct`;
+
+                setTimeout(() => {
+                    currentQuestion++;
+                    renderQuestion();
+                }, 2200);
+            } else {
+                // טעות - לא מקבל נקודה וממשיך לנסות
+                isFirstAttempt = false; 
+                clickedBtn.classList.add('option-wrong');
+                feedbackDiv.innerHTML = "❌ לא מדויק, נסה תשובה אחרת...";
+                feedbackDiv.classList.remove('hidden');
+                feedbackDiv.className = `mt-6 p-5 rounded-lg font-bold text-lg shadow-inner feedback-incorrect`;
+                
+                setTimeout(() => {
+                    clickedBtn.classList.remove('option-wrong');
+                }, 1000);
+            }
+        }
+
+        function showResults() {
+            document.getElementById('question-area').innerHTML = '';
+            const percentage = Math.round((score / quizData.length) * 100);
+            document.getElementById('score-display').innerText = percentage + '%';
+            
+            let msg = "";
+            if (percentage === 100) msg = "מדהים! שליטה מלאה בכל המאפיינים.";
+            else if (percentage >= 80) msg = "כל הכבוד! הידע שלך מבוסס היטב.";
+            else if (percentage >= 60) msg = "ציון עובר, אך כדאי לחזור על המקצבים וכלי הנגינה.";
+            else msg = "מומלץ להאזין שוב ליצירות ולקרוא על האידיאולוגיה.";
+            
+            document.getElementById('score-message').innerText = msg;
+            document.getElementById('final-results').classList.remove('hidden');
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('final-results').classList.add('hidden');
+            renderQuestion();
+        }
+
+        window.onload = renderQuestion;
+    </script>
+</body>
+</html>
