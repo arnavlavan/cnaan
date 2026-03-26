@@ -118,14 +118,14 @@
 
     <!-- Navigation -->
     <nav class="sticky-nav text-white p-4 fixed top-0 w-full z-50 shadow-2xl">
-        <div class="max-w-5xl mx-auto flex justify-between items-center px-4 flex-row-reverse">
+        <div class="max-w-5xl mx-auto flex flex-row items-center justify-between px-4">
             <div class="text-xl md:text-2xl font-bold tracking-widest underline decoration-clay">הזרם הכנעני</div>
-            <ul class="flex flex-row-reverse items-center gap-4 md:gap-8 text-sm md:text-base">
-                <li><a href="#quiz" class="nav-link">בוחן</a></li>
-                <li><a href="#jukebox" class="nav-link">האזנה</a></li>
-                <li><a href="#musical-elements" class="nav-link">מאפיינים</a></li>
-                <li><a href="#ideology" class="nav-link">אידיאולוגיה</a></li>
+            <ul class="flex flex-row items-center gap-4 md:gap-8 text-sm md:text-base">
                 <li><a href="#home" class="nav-link">בית</a></li>
+                <li><a href="#ideology" class="nav-link">אידיאולוגיה</a></li>
+                <li><a href="#musical-elements" class="nav-link">מאפיינים</a></li>
+                <li><a href="#jukebox" class="nav-link">האזנה</a></li>
+                <li><a href="#quiz" class="nav-link">בוחן</a></li>
             </ul>
         </div>
     </nav>
@@ -152,37 +152,50 @@
         <h2 class="text-5xl mb-8 border-b-2 border-stone pb-2 text-clay">האידיאולוגיה: חיפוש אחר זהות</h2>
         <div class="section-card p-8 text-xl space-y-6 leading-relaxed shadow-lg">
             <p>
-                הסגנון ה"כנעני" לא היה רק תופעה מוזיקלית, אלא חלק מניסיון אידיאולוגי רחב לעצב את העבריות החדשה. הזרם שאף להקים חברה יהודית בארץ ישראל שתהיה מנותקת מהמסורת יהודית של הגלות.
+                סגנון ההלחנה ה"כנעני" הוא אחד ממקורות ההשפעה המרכזיים על המוזיקה של שירי ארץ ישראל, לצד שירי עם רוסיים ומוזיקה קלאסית אירופאית. הזרם שאף לעצב את ה"עבריות" החדשה ולתאר את הקמת החברה היהודית בארץ תוך התרחקות מהסגנון הגלותי ואימוץ סאונד שנחשב ל"שורשי" ומקומי יותר.
             </p>
             <p>
-                במרכז התפיסה עמדה השאיפה להתחבר מחדש לתרבויות השמיות הקדומות ולמרחב הגיאוגרפי של ארץ ישראל, המדבר והיושבים המקומיים.
+                במרכז התפיסה עמדה השאיפה ליצור מוזיקה שתהיה מחוברת למרחב הגיאוגרפי של ארץ ישראל, על יושביה הבדואים והפלסטינים. הזרם ביקש להתחבר מחדש לתרבויות השמיות הקדומות ולנופי המדבר, תוך ניתוק מהמורשת של הגלות (השטעטל והמוזיקה האירופאית).
             </p>
-            <blockquote class="border-r-4 border-clay pr-6 italic text-gray-700 py-2">
-                "להיות עם חופשי בארצנו - פירושו להיות חלק מהמרחב המזרח-תיכוני, לא שלוחה של אירופה."
-            </blockquote>
+            <p>
+                הסגנון הכנעני והאידיאולוגיה שבבסיסו לא נשארו רק בגדר מוזיקה; הם מצאו ביטוי נרחב גם בספרות ובאמנות החזותית, כחלק ממהלך תרבותי רחב לביסוס הזהות הלאומית החדשה.
+            </p>
+            
+            <div class="pt-6 text-left">
+                <a href="https://he.wikipedia.org/wiki/%D7%94%D7%9B%D7%A0%D7%A2%D7%A0%D7%99%D7%9D" target="_blank" class="inline-flex items-center text-clay font-bold hover:underline group">
+                    <span>לקריאה נוספת על התנועה הכנענית בוויקיפדיה</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transform group-hover:translate-x-[-4px] transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Musical Characteristics -->
     <section id="musical-elements" class="bg-stone bg-opacity-30 py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-5xl mb-12 text-center text-clay">המרכיבים המוזיקליים</h2>
+            <h2 class="text-5xl mb-12 text-center text-clay">מאפייני הסגנון</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center h-full flex flex-col">
                     <h3 class="text-3xl mb-4">כלי נגינה</h3>
-                    <p>העדפה ברורה לכלים מקומיים: <strong>חליל</strong> ו<strong>דרבוקה</strong>.</p>
+                    <p class="flex-grow">
+                        העדפה ברורה לכלים מקומיים: <strong>חליל</strong> ו<strong>דרבוקה</strong>. הדרבוקה היא התוף המקומי, והחליל מסמל את הזיקה לטבע, בהיותו כלי שהיה מקושר עם רועי צאן. בתנ"ך אף מסופר כי דוד המלך, שהיה רועה צאן בצעירותו, ניגן בחליל.
+                    </p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center h-full flex flex-col">
                     <h3 class="text-3xl mb-4">מקצבים</h3>
-                    <p>השפעה חזקה של ריקוד ה<strong>דבקה</strong>. מקצבים אסימטריים ואנרגטיים.</p>
+                    <p class="flex-grow">מקצבים אסימטריים והשפעה חזקה של ריקוד ה<strong>דבקה</strong> המקומי. הדבקה היא ריקוד פופולרי בארץ ישראל ובמזרח התיכון, ומשמעותה 'רקיעה ברגל'. באופן מסורתי הריקוד מבוצע על ידי גברים העומדים בשורה.</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center h-full flex flex-col">
                     <h3 class="text-3xl mb-4">לחני המדבר</h3>
-                    <p>שימוש בלחנים המבוססים על <strong>שירי עם בדואיים</strong>.</p>
+                    <p class="flex-grow">
+                        שימוש בלחנים המבוססים על <strong>שירי עם בדואיים</strong> או לחנים השואבים מהם השראה סגנונית. מערכי צליל כאלה נקראים "מודוסים", והם נבדלים מסולמות המאז'ור והמינור המערביים.
+                    </p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center">
+                <div class="bg-white p-6 rounded shadow-md border-t-4 border-clay text-center h-full flex flex-col">
                     <h3 class="text-3xl mb-4">תכנים</h3>
-                    <p>נופי המדבר, רעיית צאן ומיתוס עברי קדום.</p>
+                    <p class="flex-grow">נופי המדבר, רעיית צאן, איתני הטבע ונדודים, כחלק מניסיון ליצירת מיתוס עברי קדום. בנוסף, יש עיסוק בתכנים הקשורים לחקלאות מסורתית.</p>
                 </div>
             </div>
         </div>
@@ -197,8 +210,8 @@
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                     <h3 class="text-4xl text-clay mb-2">דבקה רפיח</h3>
-                    <p class="text-lg mb-4 italic">מילים ולחן: זמיר. ביצוע: הנדל.</p>
-                    <p class="text-lg">שילוב מקצב הדבקה המקומי עם טקסט העוסק בביטחון ובמרחב. השיר מדגים את השפעת המקצבים הערביים על הזמר העברי החדש.</p>
+                    <p class="text-lg mb-4 italic">מילים: עמנואל זמיר. לחן: עממי. ביצוע: נחמה הנדל.</p>
+                    <p class="text-lg">מילות השיר נכתבו ללחן עממי בדואי. השיר נוצר בעקבות מעצרם של פעילים ביישוב העברי בכלא רפיח, באירועי ה"שבת השחורה", ב-29 ביוני 1946. הפעיל משה פרסר, הפיץ את המנגינה לאחר ששמע אותה במחנה המעצר רפיח.</p>
                 </div>
                 <div class="aspect-video relative overflow-hidden rounded shadow-xl border-2 border-clay bg-black">
                     <div id="player1" class="w-full h-full"></div>
@@ -212,8 +225,44 @@
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-4xl text-clay mb-2">אורחה במדבר</h3>
-                    <p class="text-lg mb-4 italic">לחן: זהבי. ביצוע: דגן.</p>
-                    <p class="text-lg">השיר מתאר שיירת גמלים ומשתמש במוטיבים המדמים את תנועת הגמל. יצירת מופת המאחדת מלודיה מערבית עם אווירה מזרחית.</p>
+                    <p class="text-lg mb-4 italic">לחן: דוד זהבי. ביצוע: צילה דגן.</p>
+                    <p class="text-lg">השיר מתאר תנועה של שיירת גמלים הצועדת במדבר שומם. המנגינה מדמה את קצב הפסיעה המונוטוני של השיירה.</p>
+                </div>
+            </div>
+
+            <!-- Song 3 -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-4xl text-clay mb-2">באר בשדה</h3>
+                    <p class="text-lg mb-4 italic">מילים ולחן: עמנואל זמיר. ביצוע: טובה רוני</p>
+                    <p class="text-lg">השיר נכתב בשנת 1947, והוא מהווה דוגמה מובהקת ל"שיר רועים", אחת מן הסוגות האופייניות לזרם הכנעני.</p>
+                </div>
+                <div class="aspect-video relative overflow-hidden rounded shadow-xl border-2 border-clay bg-black">
+                    <div id="player3" class="w-full h-full"></div>
+                </div>
+            </div>
+
+            <!-- Song 4 -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1 aspect-video relative overflow-hidden rounded shadow-xl border-2 border-clay bg-black">
+                    <div id="player4" class="w-full h-full"></div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-4xl text-clay mb-2">שדמתי</h3>
+                    <p class="text-lg mb-4 italic">מילים: יצחק שנהר. לחן: ידידיה אדמון. ביצוע: אילקה (הלל) ואביבה רווה.</p>
+                    <p class="text-lg">השיר הולחן בשנת 1927. תוכן השיר עוסק בחקלאות מסורתית, והמלודיה שלו "מתנדנדת" בין כמה מערכות מודאליות מקבילות, מה שמעניק לו את הצבע ההרמוני המיוחד המזוהה עם הסגנון הכנעני.</p>
+                </div>
+            </div>
+
+            <!-- Song 5 -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-4xl text-clay mb-2">דבקה החמור</h3>
+                    <p class="text-lg mb-4 italic">מילים ולחן: עמנואל זמיר. ביצוע: לילית נגר.</p>
+                    <p class="text-lg">השיר נכתב בעקבות ביקורו של זמיר בכפר ערבי, שם שמע את המשפט "שאלו חמור לאן אתה הולך, ובתשובה ענה החמור: 'לחטוב עצים ולהביא מים מן המעין'". את המשפט הזה בערבית מצטט זמיר בשירו – שילוב נדיר ומעניין המדגים את הזיקה המרחבית של הזרם הכנעני.</p>
+                </div>
+                <div class="aspect-video relative overflow-hidden rounded shadow-xl border-2 border-clay bg-black">
+                    <div id="player5" class="w-full h-full"></div>
                 </div>
             </div>
         </div>
@@ -226,7 +275,6 @@
             <div id="quiz-container">
                 <div id="question-area"></div>
                 
-                <!-- Final Results Display -->
                 <div id="final-results" class="hidden text-center animate-fade-in py-10">
                     <h3 class="text-5xl mb-6 text-clay">סיכום הבוחן</h3>
                     <div class="bg-sand p-8 rounded-lg border-2 border-clay mb-8">
@@ -235,7 +283,6 @@
                     </div>
                     <p id="score-message" class="mb-10 text-2xl font-medium text-dark-stone"></p>
                     
-                    <!-- Restart Button with Explicit White Text -->
                     <button onclick="resetQuiz()" class="inline-block bg-[#a0522d] hover:bg-[#8b4513] text-white font-bold py-5 px-12 rounded-full text-2xl shadow-2xl transition-all transform hover:scale-105 active:scale-95 border-b-4 border-black/20">
                         לחץ כאן לניסיון חוזר
                     </button>
@@ -249,22 +296,25 @@
         <p class="text-sm opacity-60">קורס 10785 - מוסיקה פופולרית בישראל | אדם יודפת</p>
     </footer>
 
-    <!-- YouTube API Script -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-        let player1, player2;
+        let players = [];
         function onYouTubeIframeAPIReady() {
-            player1 = new YT.Player('player1', {
-                height: '100%',
-                width: '100%',
-                videoId: 'ZGRpi1rDqCo',
-                playerVars: { 'rel': 0, 'modestbranding': 1 }
-            });
-            player2 = new YT.Player('player2', {
-                height: '100%',
-                width: '100%',
-                videoId: 'kx93RDbVPek',
-                playerVars: { 'rel': 0, 'modestbranding': 1 }
+            const videoData = [
+                { id: 'player1', videoId: 'ZGRpi1rDqCo' },
+                { id: 'player2', videoId: 'kx93RDbVPek' },
+                { id: 'player3', videoId: 'P1AJXGUgJpc' },
+                { id: 'player4', videoId: 'EPqmvexXniQ' },
+                { id: 'player5', videoId: 'P3L3iUFdXj8' }
+            ];
+
+            videoData.forEach(video => {
+                players.push(new YT.Player(video.id, {
+                    height: '100%',
+                    width: '100%',
+                    videoId: video.videoId,
+                    playerVars: { 'rel': 0, 'modestbranding': 1 }
+                }));
             });
         }
 
@@ -356,12 +406,10 @@
             const clickedBtn = document.getElementById(`opt-${choice}`);
 
             if (isCorrect) {
-                // אם צדק בניסיון הראשון, מקבל נקודה
                 if (isFirstAttempt) {
                     score++;
                 }
                 
-                // הקפאת כפתורים
                 const buttons = document.querySelectorAll('.quiz-btn');
                 buttons.forEach(btn => btn.disabled = true);
                 
@@ -375,7 +423,6 @@
                     renderQuestion();
                 }, 2200);
             } else {
-                // טעות - לא מקבל נקודה וממשיך לנסות
                 isFirstAttempt = false; 
                 clickedBtn.classList.add('option-wrong');
                 feedbackDiv.innerHTML = "❌ לא מדויק, נסה תשובה אחרת...";
